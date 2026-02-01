@@ -191,12 +191,12 @@ body {
 }
 .demo-footer {
   background: none;
-  color: #e9dbfd;
+  color: #6b5277;
   text-align: center;
-  font-size: 0.98em;
+  font-size: 1.06em;
   position: fixed;
   width: 100vw;
-  bottom: 5px;
+  bottom: 16px;
   left: 0;
   z-index: 999;
   letter-spacing: 0.04em;
