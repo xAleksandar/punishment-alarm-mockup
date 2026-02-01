@@ -1,6 +1,5 @@
-body.app-bg {
-  background: linear-gradient(135deg, #b993fd 0%, #8e70d2 100%) no-repeat fixed;
-  min-height: 100vh;
+body {
+  background: #fcf6ff;
   margin: 0;
   font-family: 'Segoe UI', Arial, sans-serif;
   color: #222;
@@ -119,7 +118,7 @@ body.app-bg {
   position: fixed;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 68px; /* above footer */
+  bottom: 68px;
   display: flex;
   flex-direction: column;
   gap: 12px;
