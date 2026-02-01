@@ -17,9 +17,9 @@ function renderAlarms() {
         <span class="punishment">${alarm.punishment.join(", ")}</span>
       </div>
       <div class="controls">
-        <label class="radio-style">
-          <input type="radio" name="alarm-toggle" ${alarm.active ? "checked" : ""} onchange="toggleAlarm(${i})">
-          <span class="checkmark"></span>
+        <label class="toggle-switch">
+          <input type="checkbox" ${alarm.active ? "checked" : ""} onchange="toggleAlarm(${i})">
+          <span class="slider"></span>
         </label>
       </div>
     </div>

@@ -58,42 +58,43 @@ body {
   color: #B893FD;
   font-weight: 500;
 }
-.radio-style {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-.radio-style input[type="radio"] {
-  opacity: 0;
-  width: 21px;
-  height: 21px;
-  margin: 0;
-}
-.radio-style .checkmark {
-  display: inline-block;
-  width: 23px;
-  height: 23px;
-  border-radius: 50%;
-  border: 2.7px solid #9a79e7;
-  background: #f9f6fb;
+/* iOS/Android-like toggle switch */
+.toggle-switch {
   position: relative;
-  box-shadow: 0 1px 3px #b993fd22;
+  display: inline-block;
+  width: 40px;
+  height: 24px;
 }
-.radio-style input[type="radio"]:checked + .checkmark {
-  background: radial-gradient(circle at 50% 55%, #905edd 61%, #f9f6fb 69%);
-  border-color: #905edd;
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
-.radio-style input[type="radio"]:checked + .checkmark:after {
-  content: "";
-  display: block;
+.toggle-switch .slider {
   position: absolute;
-  left: 5px;
-  top: 5px;
-  width: 9px;
-  height: 9px;
-  background: #fff;
+  cursor: pointer;
+  top: 0; left: 0;
+  right: 0; bottom: 0;
+  background-color: #cab9e5;
+  transition: .3s;
+  border-radius: 24px;
+}
+.toggle-switch input:checked + .slider {
+  background-color: #8E70D2;
+}
+.toggle-switch .slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px; bottom: 3px;
+  background-color: #fff;
   border-radius: 50%;
-  box-shadow: 0 1px 3px #7d53c970;
+  transition: .3s;
+  box-shadow: 0px 1px 8px #8e70d230;
+}
+.toggle-switch input:checked + .slider:before {
+  transform: translateX(16px);
 }
 .plus-btn {
   background: linear-gradient(135deg, #8E70D2, #abc), #fff;
