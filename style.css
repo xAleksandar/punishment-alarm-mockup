@@ -4,6 +4,7 @@ body {
   padding: 0 !important;
   font-family: 'Segoe UI', Arial, sans-serif;
   color: #222;
+  overflow-x: hidden;
 }
 .container {
   max-width: 400px;
@@ -16,6 +17,7 @@ body {
   box-shadow: 0 2px 24px #8e70d228;
   padding: 0 20px 16px 20px;
   position: relative;
+  box-sizing: border-box;
 }
 .alarms-main {
   margin-top: 0;
@@ -56,7 +58,6 @@ body {
   color: #B893FD;
   font-weight: 500;
 }
-/* Radio style for alarm toggles */
 .radio-style {
   display: inline-flex;
   align-items: center;
@@ -139,18 +140,14 @@ body {
   display: block;
   color: #5751aa;
 }
-#alarm-label.input-modern {
+#alarm-label.input-modern, #alarm-time.input-modern {
   font-size: 1.04em;
   margin-bottom: 0.8em;
   padding: 0.46em 1em;
   height: 2.2em;
+  width: 100%;
   min-width: 0;
-}
-#alarm-time.input-modern {
-  margin-bottom: 0.8em;
-  padding: 0.46em 1em;
-  height: 2.2em;
-  min-width: 0;
+  box-sizing: border-box;
 }
 .input-modern {
   font-size: 1.07em;
@@ -160,10 +157,11 @@ body {
   padding: 0.46em 1em;
   margin-top: 0.13em;
   margin-bottom: 0.7em;
-  width: 97%;
+  width: 100%;
   background: #f8f0ff;
   color: #5942a5;
   display: block;
+  box-sizing: border-box;
 }
 .input-modern:focus {
   outline: 2px solid #9a6aff;
