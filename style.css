@@ -13,12 +13,9 @@ body {
   padding: 0 20px 16px 20px;
   position: relative;
 }
-.alarms-main {
-  margin-top: 0;
-}
 .alarms-main h1 {
   color: #8E70D2;
-  margin: 1.4em 0 1em 0;
+  margin: 2em 0 1em 0;
   font-weight: 700;
   letter-spacing: -1px;
 }
@@ -197,6 +194,9 @@ input:checked + .slider:before {
 }
 .feedback-ok {
   color: #34b900;
+}
+.alarms-main h1 {
+  margin-top: 32px !important;
 }
 footer {
   margin-top: 2em;
