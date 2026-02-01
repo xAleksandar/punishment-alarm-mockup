@@ -8,43 +8,51 @@
 </head>
 <body>
   <div class="container">
-    <header>
+    <!-- 1. Alarm List -->
+    <section class="alarms-main">
       <h1>Wake or Suffer</h1>
-      <p>Alarm app with real consequences for snoozing</p>
-    </header>
-    
-    <main>
-      <section class="setup">
-        <h2>Set Alarm</h2>
-        <input type="time" value="07:30" />
-        <h3>Choose Your Punishment</h3>
-        <ul>
-          <li><input type="checkbox" id="pay" checked><label for="pay">Pay $2 every snooze</label></li>
-          <li><input type="checkbox" id="lock"><label for="lock">Lock phone for 20 min</label></li>
-          <li><input type="checkbox" id="math"><label for="math">Solve math problem</label></li>
-          <li><input type="checkbox" id="social"><label for="social">Message a friend</label></li>
-        </ul>
-        <button class="primary">Save Alarm</button>
-      </section>
-      <section class="alarm-screen">
-        <h2>Alarm Ringing!</h2>
-        <p class="timer">07:30 AM</p>
-        <button class="dismiss">I'm Awake</button>
-        <button class="snooze">Snooze</button>
-      </section>
-      <section class="punishment" style="display:none">
-        <h2>Punishment Activated!</h2>
-        <ul>
-          <li>You paid $2 to charity.</li>
-          <li>Phone is locked for 20 minutes.</li>
-        </ul>
-        <p>Next time, rise and shine!</p>
-      </section>
-    </main>
-
+      <div class="alarms-list"></div>
+      <button class="plus-btn" title="Add Alarm">+</button>
+    </section>
+    <!-- 2. Add/Edit Alarm -->
+    <section class="set-alarm" style="display:none">
+      <h2>Set Alarm</h2>
+      <label>
+        Time:
+        <input id="alarm-time" type="time" value="07:00" />
+      </label>
+      <label>
+        Label:
+        <input id="alarm-label" type="text" maxlength="32" placeholder="Alarm label"/>
+      </label>
+      <h3>Punishments</h3>
+      <div class="alarm-punish">
+        <label><input type="checkbox">Pay $2 every snooze</label><br/>
+        <label><input type="checkbox">Lock phone for 20 min</label><br/>
+        <label><input type="checkbox">Solve math problem</label><br/>
+        <label><input type="checkbox">Message a friend</label><br/>
+        <label><input type="checkbox" id="random-punish">Random punishment</label>
+      </div>
+      <div>
+        <button class="save-alarm primary">Save</button> <button class="cancel-alarm">Cancel</button>
+      </div>
+    </section>
+    <!-- 3. Alarm Modal -->
+    <section class="alarm-modal" style="display:none">
+      <div class="modal-content">
+        <h2 class="alarm-title">Alarm</h2>
+        <div class="alarm-time">07:00</div>
+        <div>
+          <button class="snooze-btn">Snooze</button>
+          <button class="stop-btn primary">Stop</button>
+        </div>
+        <div class="feedback"></div>
+      </div>
+    </section>
     <footer>
-      <small>Mockup by Rob for Aleksandar &bull; 2026</small>
+      <small>Demo by Rob for Aleksandar &bull; 2026</small>
     </footer>
   </div>
+  <script src="app.js"></script>
 </body>
 </html>

@@ -12,77 +12,185 @@ body {
   box-shadow: 0 2px 24px #8e70d228;
   padding: 32px 20px 16px 20px;
 }
-header h1 {
-  margin-bottom: 4px;
-  font-size: 2rem;
+.alarms-main h1 {
   color: #8E70D2;
+  margin-bottom: 1em;
+  font-weight: 700;
+  letter-spacing: -1px;
 }
-header p {
-  margin: 0 0 1.6em 0;
-  color: #53426B;
+.alarms-list {
+  margin-bottom: 2.7em;
 }
-h2 {
-  font-size: 1.2rem;
-  margin-top: 0.5em;
-  margin-bottom: 0.25em;
-}
-ul {
-  padding-left: 0;
-  list-style: none;
-}
-li {
-  margin: 0.35em 0;
+.alarm-item {
+  background: #F6F2FF;
+  border-radius: 10px;
+  padding: 1em 1em 0.5em 1em;
+  margin-bottom: 1.15em;
   display: flex;
+  justify-content: space-between;
   align-items: center;
+  box-shadow: 0 1px 6px #8e70d220;
+  transition: opacity 0.15s;
 }
-input[type="checkbox"] {
-  accent-color: #8E70D2;
-  margin-right: 0.6em;
+.alarm-item.inactive {
+  opacity: 0.45;
 }
-button.primary {
+.alarm-item .label {
+  margin-left: 0.9em;
+  color: #53426B;
+  font-size: 0.98em;
+  font-style: italic;
+}
+.alarm-item .punishment {
+  font-size: 0.93em;
+  color: #B893FD;
+  font-weight: 500;
+}
+.plus-btn {
+  background: linear-gradient(135deg, #8E70D2, #abc)
+    , #fff;
+  color: #fff;
+  font-size: 2.3em;
+  border: none;
+  border-radius: 2em;
+  box-shadow: 0 2px 10px #8e70d244;
+  padding: 0.1em 0.54em;
+  position: absolute;
+  bottom: 54px;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  cursor: pointer;
+  outline: none;
+  transition: background 0.2s;
+  width: 50px;
+  height: 50px;
+  display: block;
+}
+.plus-btn:hover {
+  background: linear-gradient(135deg, #A085E0, #c1b6e6);
+}
+.set-alarm label {
+  display: block;
+  margin: 1.1em 0 0.25em 0.13em;
+  font-size: 0.98em;
+}
+.set-alarm input[type="time"],
+.set-alarm input[type="text"] {
+  font-size: 1.1em;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  padding: 0.27em 0.7em;
+  margin-bottom: 0.5em;
+  width: 90%;
+  box-sizing: border-box;
+}
+.set-alarm h3 {
+  margin: 0.98em 0 0.25em 0;
+  color: #7453c5;
+}
+.set-alarm .alarm-punish label {
+  display: block;
+  margin: 0.3em 0 0.3em 0.62em;
+  font-size: 1em;
+}
+.set-alarm .primary {
+  margin-right: 1.6em;
+}
+.set-alarm button, .alarm-modal button {
+  margin-top: 0.6em;
+  padding: 0.51em 2.1em;
+  border-radius: 8px;
+  border: none;
+  font-size: 1.08em;
   background: #8E70D2;
   color: #fff;
-  border: none;
-  margin-top: 1em;
-  border-radius: 8px;
-  padding: 12px 30px;
-  font-size: 1rem;
   cursor: pointer;
+  transition: background 0.17s;
   box-shadow: 0 1px 6px #8e70d240;
 }
-.alarm-screen, .punishment {
-  margin-top: 2em;
+.set-alarm button.cancel-alarm {
+  background: #a2a3a8;
+  color: #fff;
+}
+.set-alarm button:active, .alarm-modal button:active {
+  filter: brightness(0.97);
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 22px;
+  margin-left: 0.6em;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #c2adf9;
+  border-radius: 22px;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+input:checked + .slider {
+  background-color: #8E70D2;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 3px;
+  background-color: white;
+  border-radius: 50%;
+  transition: .4s;
+}
+input:checked + .slider:before {
+  transform: translateX(16px);
+}
+.alarm-modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(142,112,210,0.17);
+  align-items: center;
+  justify-content: center;
+  z-index: 51;
+}
+.alarm-modal .modal-content {
+  background: #fcf6ff;
+  border-radius: 16px;
+  box-shadow: 0 8px 40px #8e70d273;
+  padding: 32px 30px 18px 30px;
   text-align: center;
-  border-top: 1px solid #ece4fc;
-  padding-top: 1.5em;
 }
-.alarm-screen .timer {
-  font-size: 2.8em;
-  margin-bottom: 1em;
-}
-button.dismiss {
-  background: #34b900;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  padding: 10px 24px;
-  font-size: 1em;
-  margin: 0.3em 1.2em 0.3em 0;
-  cursor: pointer;
-}
-button.snooze {
-  background: #FF5E84;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  padding: 10px 24px;
-  font-size: 1em;
-  cursor: pointer;
-}
-.punishment ul {
+.alarm-modal .alarm-title {
+  font-size: 1.5em;
+  margin: 0.5em 0 0.8em 0;
   color: #8E70D2;
-  font-weight: 600;
-  margin-top: 1.2em;
+}
+.alarm-modal .alarm-time {
+  font-size: 2.5em;
+  font-weight: 700;
+  margin: 0.5em 0 1em 0;
+}
+.alarm-modal .feedback {
+  margin-top: 0.9em;
+  min-height: 2em;
+  color: #8E70D2;
+  font-size: 1.02em;
+}
+.feedback-err {
+  color: #FF5E84;
+}
+.feedback-ok {
+  color: #34b900;
 }
 footer {
   margin-top: 2em;
