@@ -6,16 +6,19 @@ body {
 }
 .container {
   max-width: 400px;
-  margin: 0 auto 0 auto;
+  margin: 0 auto;
   background: #fff;
   border-radius: 18px;
   box-shadow: 0 2px 24px #8e70d228;
-  padding: 32px 20px 16px 20px;
+  padding: 0 20px 16px 20px;
   position: relative;
+}
+.alarms-main {
+  margin-top: 0;
 }
 .alarms-main h1 {
   color: #8E70D2;
-  margin-bottom: 1em;
+  margin: 0 0 1em 0;
   font-weight: 700;
   letter-spacing: -1px;
 }
@@ -50,7 +53,7 @@ body {
 .plus-btn {
   background: linear-gradient(135deg, #8E70D2, #abc), #fff;
   color: #fff;
-  font-size: 2em;
+  font-size: 2.1em;
   border: none;
   border-radius: 50%;
   box-shadow: 0 2px 10px #8e70d244;
@@ -67,6 +70,8 @@ body {
   outline: none;
   transition: background 0.2s;
   z-index: 100;
+  line-height: 1;
+  padding: 0;
 }
 .plus-btn:hover {
   background: linear-gradient(135deg, #A085E0, #c1b6e6);
