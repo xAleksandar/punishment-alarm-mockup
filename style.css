@@ -1,5 +1,6 @@
-body {
-  background: #fcf6ff;
+body.app-bg {
+  background: linear-gradient(135deg, #b993fd 0%, #8e70d2 100%) no-repeat fixed;
+  min-height: 100vh;
   margin: 0;
   font-family: 'Segoe UI', Arial, sans-serif;
   color: #222;
@@ -73,20 +74,36 @@ body {
 .plus-btn:hover {
   background: linear-gradient(135deg, #A085E0, #c1b6e6);
 }
-.set-alarm label {
-  display: block;
-  margin: 1.1em 0 0.25em 0.13em;
-  font-size: 0.98em;
+.set-alarm {
+  background: none;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
-.set-alarm input[type="time"],
-.set-alarm input[type="text"] {
+.set-alarm-fields {
+  padding-top: 2.2em;
+}
+.input-modern {
   font-size: 1.1em;
-  border: 1px solid #ccc;
-  border-radius: 7px;
-  padding: 0.27em 0.7em;
-  margin-bottom: 0.5em;
-  width: 90%;
-  box-sizing: border-box;
+  border: 1.7px solid #b993fd;
+  border-radius: 13px;
+  box-shadow: 0 2px 7px #b993fd22;
+  padding: 0.5em 1.1em;
+  margin-bottom: 1em;
+  width: 93%;
+  background: #f8f0ff;
+  color: #5942a5;
+}
+.input-modern:focus {
+  outline: 2px solid #9a6aff;
+  background: #efe5fc;
+}
+.set-alarm h2 {
+  color: #bf99ff;
+  margin-top: 0.2em;
+  margin-bottom: 1.15em;
 }
 .set-alarm h3 {
   margin: 0.98em 0 0.25em 0;
@@ -97,65 +114,40 @@ body {
   margin: 0.3em 0 0.3em 0.62em;
   font-size: 1em;
 }
-.set-alarm .primary {
-  margin-right: 1.6em;
+.settings-actions {
+  width: 100%;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 68px; /* above footer */
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0 16px;
+  max-width: 410px;
+  box-sizing: border-box;
 }
-.set-alarm button, .alarm-modal button {
-  margin-top: 0.6em;
-  padding: 0.51em 2.1em;
-  border-radius: 8px;
+.settings-actions button {
+  width: 100%;
+  font-size: 1.17em;
+  padding: 1em 0.5em;
+  margin: 0;
+  border-radius: 11px;
   border: none;
-  font-size: 1.08em;
-  background: #8E70D2;
+  background: #9a6aff;
   color: #fff;
+  box-shadow: 0 1px 6px #9a6aff49;
   cursor: pointer;
   transition: background 0.17s;
-  box-shadow: 0 1px 6px #8e70d240;
+  letter-spacing: 0.02em;
+  font-weight: 600;
 }
-.set-alarm button.cancel-alarm {
-  background: #a2a3a8;
-  color: #fff;
+.settings-actions button.cancel-alarm {
+  background: #cab2fd;
+  color: #674b99;
 }
-.set-alarm button:active, .alarm-modal button:active {
-  filter: brightness(0.97);
-}
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 40px;
-  height: 22px;
-  margin-left: 0.6em;
-}
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background-color: #c2adf9;
-  border-radius: 22px;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-input:checked + .slider {
-  background-color: #8E70D2;
-}
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 16px;
-  width: 16px;
-  left: 4px;
-  bottom: 3px;
-  background-color: white;
-  border-radius: 50%;
-  transition: .4s;
-}
-input:checked + .slider:before {
-  transform: translateX(16px);
+.settings-actions button:active {
+  filter: brightness(0.96);
 }
 .alarm-modal {
   display: none;
@@ -195,12 +187,16 @@ input:checked + .slider:before {
 .feedback-ok {
   color: #34b900;
 }
-.alarms-main h1 {
-  margin-top: 32px !important;
-}
-footer {
-  margin-top: 2em;
-  color: #8871c0bb;
+.demo-footer {
+  background: none;
+  color: #e9dbfd;
   text-align: center;
-  font-size: 0.9em;
+  font-size: 0.98em;
+  position: fixed;
+  width: 100vw;
+  bottom: 5px;
+  left: 0;
+  z-index: 999;
+  letter-spacing: 0.04em;
+  pointer-events: none;
 }

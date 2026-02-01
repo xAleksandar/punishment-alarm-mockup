@@ -6,7 +6,7 @@
   <title>Wake or Suffer - Alarm App Mockup</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body class="app-bg">
   <div class="container">
     <!-- 1. Alarm List -->
     <section class="alarms-main">
@@ -16,25 +16,28 @@
     </section>
     <!-- 2. Add/Edit Alarm -->
     <section class="set-alarm" style="display:none">
-      <h2>Set Alarm</h2>
-      <label>
-        Time:
-        <input id="alarm-time" type="time" value="07:00" />
-      </label>
-      <label>
-        Label:
-        <input id="alarm-label" type="text" maxlength="32" placeholder="Alarm label"/>
-      </label>
-      <h3>Punishments</h3>
-      <div class="alarm-punish">
-        <label><input type="checkbox">Pay $2 every snooze</label><br/>
-        <label><input type="checkbox">Lock phone for 20 min</label><br/>
-        <label><input type="checkbox">Solve math problem</label><br/>
-        <label><input type="checkbox">Message a friend</label><br/>
-        <label><input type="checkbox" id="random-punish">Random punishment</label>
+      <div class="set-alarm-fields">
+        <h2>Set Alarm</h2>
+        <label>
+          Time:
+          <input id="alarm-time" class="input-modern" type="time" value="07:00" />
+        </label>
+        <label>
+          Label:
+          <input id="alarm-label" class="input-modern" type="text" maxlength="32" placeholder="Alarm label"/>
+        </label>
+        <h3>Punishments</h3>
+        <div class="alarm-punish">
+          <label><input type="checkbox">Pay $2 every snooze</label><br/>
+          <label><input type="checkbox">Lock phone for 20 min</label><br/>
+          <label><input type="checkbox">Solve math problem</label><br/>
+          <label><input type="checkbox">Message a friend</label><br/>
+          <label><input type="checkbox" id="random-punish">Random punishment</label>
+        </div>
       </div>
-      <div>
-        <button class="save-alarm primary">Save</button> <button class="cancel-alarm">Cancel</button>
+      <div class="settings-actions">
+        <button class="save-alarm primary">Save</button>
+        <button class="cancel-alarm">Cancel</button>
       </div>
     </section>
     <!-- 3. Alarm Modal -->
@@ -49,10 +52,10 @@
         <div class="feedback"></div>
       </div>
     </section>
-    <footer>
-      <small>demo by Viki for aleksandar &bull; 2026</small>
-    </footer>
   </div>
+  <footer class="demo-footer">
+    <small>demo by Viki for aleksandar &bull; 2026</small>
+  </footer>
   <script src="app.js"></script>
 </body>
 </html>
