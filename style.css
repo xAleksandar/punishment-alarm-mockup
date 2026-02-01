@@ -1,0 +1,92 @@
+body {
+  background: #fcf6ff;
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #222;
+}
+.container {
+  max-width: 400px;
+  margin: 24px auto 0 auto;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 24px #8e70d228;
+  padding: 32px 20px 16px 20px;
+}
+header h1 {
+  margin-bottom: 4px;
+  font-size: 2rem;
+  color: #8E70D2;
+}
+header p {
+  margin: 0 0 1.6em 0;
+  color: #53426B;
+}
+h2 {
+  font-size: 1.2rem;
+  margin-top: 0.5em;
+  margin-bottom: 0.25em;
+}
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+li {
+  margin: 0.35em 0;
+  display: flex;
+  align-items: center;
+}
+input[type="checkbox"] {
+  accent-color: #8E70D2;
+  margin-right: 0.6em;
+}
+button.primary {
+  background: #8E70D2;
+  color: #fff;
+  border: none;
+  margin-top: 1em;
+  border-radius: 8px;
+  padding: 12px 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 1px 6px #8e70d240;
+}
+.alarm-screen, .punishment {
+  margin-top: 2em;
+  text-align: center;
+  border-top: 1px solid #ece4fc;
+  padding-top: 1.5em;
+}
+.alarm-screen .timer {
+  font-size: 2.8em;
+  margin-bottom: 1em;
+}
+button.dismiss {
+  background: #34b900;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 24px;
+  font-size: 1em;
+  margin: 0.3em 1.2em 0.3em 0;
+  cursor: pointer;
+}
+button.snooze {
+  background: #FF5E84;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 24px;
+  font-size: 1em;
+  cursor: pointer;
+}
+.punishment ul {
+  color: #8E70D2;
+  font-weight: 600;
+  margin-top: 1.2em;
+}
+footer {
+  margin-top: 2em;
+  color: #8871c0bb;
+  text-align: center;
+  font-size: 0.9em;
+}
