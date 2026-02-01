@@ -5,6 +5,7 @@ body {
   font-family: 'Segoe UI', Arial, sans-serif;
   color: #222;
   overflow-x: hidden;
+  overflow-y: auto;
 }
 .container, .set-alarm {
   max-width: 400px;
@@ -15,7 +16,7 @@ body {
   border-bottom-left-radius: 18px;
   border-bottom-right-radius: 18px;
   box-shadow: 0 2px 24px #8e70d228;
-  padding: 0 20px 16px 20px;
+  padding: 0 20px 0 20px;
   position: relative;
   box-sizing: border-box;
 }
@@ -123,6 +124,7 @@ body {
 }
 .set-alarm-fields {
   padding-top: 2.2em;
+  padding-bottom: 2.2em;
 }
 .set-alarm label {
   font-size: 1.06em;
