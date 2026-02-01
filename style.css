@@ -6,7 +6,7 @@ body {
   color: #222;
   overflow-x: hidden;
 }
-.container {
+.container, .set-alarm {
   max-width: 400px;
   margin: 0 auto;
   background: #fff;
@@ -58,7 +58,6 @@ body {
   color: #B893FD;
   font-weight: 500;
 }
-/* iOS/Android-like toggle switch */
 .toggle-switch {
   position: relative;
   display: inline-block;
@@ -122,14 +121,6 @@ body {
 .plus-btn:hover {
   background: linear-gradient(135deg, #A085E0, #c1b6e6);
 }
-.set-alarm {
-  background: none;
-  padding: 0;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
 .set-alarm-fields {
   padding-top: 2.2em;
 }
@@ -149,6 +140,9 @@ body {
   width: 100%;
   min-width: 0;
   box-sizing: border-box;
+  background: #f8f0ff;
+  border: 1.5px solid #cfc3ff;
+  border-radius: 11px;
 }
 .input-modern {
   font-size: 1.07em;
@@ -159,7 +153,6 @@ body {
   margin-top: 0.13em;
   margin-bottom: 0.7em;
   width: 100%;
-  background: #f8f0ff;
   color: #5942a5;
   display: block;
   box-sizing: border-box;
