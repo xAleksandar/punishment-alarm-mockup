@@ -6,11 +6,12 @@ body {
 }
 .container {
   max-width: 400px;
-  margin: 24px auto 0 auto;
+  margin: 0 auto 0 auto;
   background: #fff;
   border-radius: 18px;
   box-shadow: 0 2px 24px #8e70d228;
   padding: 32px 20px 16px 20px;
+  position: relative;
 }
 .alarms-main h1 {
   color: #8E70D2;
@@ -47,25 +48,25 @@ body {
   font-weight: 500;
 }
 .plus-btn {
-  background: linear-gradient(135deg, #8E70D2, #abc)
-    , #fff;
+  background: linear-gradient(135deg, #8E70D2, #abc), #fff;
   color: #fff;
-  font-size: 2.3em;
+  font-size: 2em;
   border: none;
-  border-radius: 2em;
+  border-radius: 50%;
   box-shadow: 0 2px 10px #8e70d244;
-  padding: 0.1em 0.54em;
-  position: absolute;
-  bottom: 54px;
-  right: 0;
-  left: 0;
-  margin: 0 auto;
+  width: 56px;
+  height: 56px;
+  position: fixed;
+  left: 50%;
+  bottom: 30px;
+  transform: translateX(-50%);
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   outline: none;
   transition: background 0.2s;
-  width: 50px;
-  height: 50px;
-  display: block;
+  z-index: 100;
 }
 .plus-btn:hover {
   background: linear-gradient(135deg, #A085E0, #c1b6e6);
