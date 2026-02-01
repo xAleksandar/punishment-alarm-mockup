@@ -94,16 +94,39 @@ body {
 .set-alarm-fields {
   padding-top: 2.2em;
 }
+.set-alarm label {
+  font-size: 1.06em;
+  font-weight: 500;
+  margin-top: 0.9em;
+  margin-bottom: 0.12em;
+  display: block;
+  color: #5751aa;
+}
+#alarm-label.input-modern {
+  font-size: 1.04em;
+  margin-bottom: 0.8em;
+  padding: 0.46em 1em;
+  height: 2.2em;
+  min-width: 0;
+}
+#alarm-time.input-modern {
+  margin-bottom: 0.8em;
+  padding: 0.46em 1em;
+  height: 2.2em;
+  min-width: 0;
+}
 .input-modern {
-  font-size: 1.1em;
-  border: 1.7px solid #b993fd;
-  border-radius: 13px;
+  font-size: 1.07em;
+  border: 1.4px solid #b993fd;
+  border-radius: 10px;
   box-shadow: 0 2px 7px #b993fd22;
-  padding: 0.5em 1.1em;
-  margin-bottom: 1em;
-  width: 93%;
+  padding: 0.46em 1em;
+  margin-top: 0.13em;
+  margin-bottom: 0.7em;
+  width: 97%;
   background: #f8f0ff;
   color: #5942a5;
+  display: block;
 }
 .input-modern:focus {
   outline: 2px solid #9a6aff;
@@ -115,13 +138,19 @@ body {
   margin-bottom: 1.15em;
 }
 .set-alarm h3 {
-  margin: 0.98em 0 0.25em 0;
+  margin: 1.3em 0 0.2em 0;
   color: #7453c5;
+  font-size: 1.23em;
+  font-weight: 600;
 }
-.set-alarm .alarm-punish label {
+.alarm-punish label {
+  font-size: 0.99em;
+  margin: 0.13em 0 0.12em 1.4em;
   display: block;
-  margin: 0.3em 0 0.3em 0.62em;
-  font-size: 1em;
+  font-weight: 400;
+}
+.alarm-punish label:first-child {
+  margin-top: 0.82em;
 }
 .settings-actions {
   width: 100%;
