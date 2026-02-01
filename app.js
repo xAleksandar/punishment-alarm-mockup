@@ -17,16 +17,16 @@ function renderAlarms() {
         <span class="punishment">${alarm.punishment.join(", ")}</span>
       </div>
       <div class="controls">
-        <label class="switch">
-          <input type="checkbox" ${alarm.active ? "checked" : ""} onchange="toggleAlarm(${i})">
-          <span class="slider"></span>
+        <label class="radio-style">
+          <input type="radio" name="alarm-toggle" ${alarm.active ? "checked" : ""} onchange="toggleAlarm(${i})">
+          <span class="checkmark"></span>
         </label>
       </div>
     </div>
   `).join("");
 }
 
-function toggleAlarm(i) {
+window.toggleAlarm = function(i) {
   alarms[i].active = !alarms[i].active;
   renderAlarms();
 }
